@@ -96,15 +96,14 @@ main {
   }
 
   .about{
-    width: 100%;
+    margin-top: 100px;
+    height: 200px;
     text-align:center;
   display:flex;
   justify-content: center;
-  }
-  .about p {
-    text-emphasis: wrap;
-  }
 
+  }
+ 
   .profile{
     width: 250px;
     height: 250px;
@@ -126,4 +125,8 @@ main {
     width: 100%;
     height: auto;
     border: black solid 1px;
+  }
+
+  .align{
+    text-align:left;
   }
