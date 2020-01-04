@@ -2,72 +2,91 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Instagram Feed</title>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js">         </script>
-    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-    <!-- Slick.js  -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-				
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Instagram Feed</title>
+  <script type="text/javascript"
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js">         </script>
+  <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+
+  <!-- Slick.js  -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <script src="app.js"></script>
+
 </head>
-<nav id="main"> 
-    <div class="toggle">
+<nav id="main">
+  <div class="toggle">
     <label class="switch">
-     <input type="checkbox" onclick="darkLight()" id="checkBox" >
-     <span class="slider"></span>
+      <input type="checkbox" onclick="darkLight()" id="checkBox">
+      <span class="slider"></span>
     </label>
-</div>
+  </div>
 </nav>
-<br>
-
-
-<body>
-  <div class="slider-box"> 
-    <div class="slider-for">
-        <div>your content</div>
+<body>    
+  <div class="wrapper">
+      <div class='container'>
+        <div class='slider-for'>
+          <div class="icon"><img class="slider-image" src="./assets/photograph.jpg"></div>
+          <div><h3>2</h3></div>
+          <div><h3>3</h3></div>
+        </div>
+          <div class='slider-nav'>
+          <div class="icon"><img class="nav-image" src="./assets/photograph.jpg"></div>
+          <div class="icon"><h3>2</h3></div>
+          <div class="icon"><h3>3</h3></div>
+        
+        </div>
       </div>
-      <div class="slider-nav">
-        <div><img class="nav-image" src="./assets/nikki.jpg"></div>
-        <div><img class="nav-image" src="./assets/nikki.jpg"></div>
-        <div><img class="nav-image" src="./assets/nikki.jpg"></div>
-      </div>
-    </div>           
+  <div class="instagram">
+    <iframe src="//lightwidget.com/widgets/74e03d6046ba5b2a99acd75727481f90.html" scrolling="no"
+      allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+  </div>
 
-
-
-   <div class="instagram">
-<iframe src="//lightwidget.com/widgets/74e03d6046ba5b2a99acd75727481f90.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
-</div> 
-
-<div class="about">
-  <img class="profile" src="./assets/photograph.jpg">
-  <div class="introduction">
-    <p> Hi! I'm Nikki Sato, a Full-Stack Developer with a passion for Front-End Design. I love to create videos and take photos during my free time! My next Bucketlist to travel are 
-    </p>
+  <div class="about">
+    <img class="profile" src="./assets/photograph.jpg">
+    <div class="introduction">
+      <p> Hi! I'm Nikki Sato, a Full-Stack Developer with a passion for Front-End Design. I love to create videos and
+        take photos during my free time! My next Bucketlist to travel are
+      </p>
       <ol class="align">
-     <li><b>Canada:</b> to visit the Banff Alberta, and travel by train from coast to coast!</li>
+        <li><b>Canada:</b> to visit the Banff Alberta, and travel by train from coast to coast!</li>
         <li><b>Japan:</b> beautiful sakura flowers blooming in the spring</li>
         <li><b>Iceland:</b> Amazing northern lights in freezing temperatures</li>
-
+    </div>
   </div>
 </div>
 
-<script type="text/javascript">
-  $(document).ready(function(){
+<script>
+
+$(document).ready(function(){
     $('.your-class').slick({
-      setting-name: setting-value
+        setting-name: setting - value
     });
-  });
+});</script>
+
+<script>
+  $('.slider-for').slick({
+slidesToShow: 1,
+slidesToScroll: 1,
+arrows: false,
+fade: true,
+asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+slidesToShow: 3,
+slidesToScroll: 1,
+asNavFor: '.slider-for',
+dots: true,
+centerMode: true,
+focusOnSelect: true
+});
 </script>
-    <script src="app.js"></script>
-
 </body>
-</html>
 
+</html>

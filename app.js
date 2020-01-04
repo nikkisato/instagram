@@ -16,12 +16,6 @@ if ($('body').hasClass('dark')) {
     $('#checkBox').prop('checked', false);
 }
 
-$(document).ready(function(){
-    $('.your-class').slick({
-        setting-name: setting - value
-    });
-});
-
 $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
