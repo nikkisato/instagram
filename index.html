@@ -21,72 +21,114 @@
 
 </head>
 <nav id="main">
+
   <div class="toggle">
+    <h1 class="center">Photography Status</h1>
     <label class="switch">
       <input type="checkbox" onclick="darkLight()" id="checkBox">
       <span class="slider"></span>
     </label>
   </div>
 </nav>
-<body>    
+
+<body>
   <div class="wrapper">
-      <div class='container'>
-        <div class='slider-for'>
-          <div class="icon"><img class="slider-image" src="./assets/photograph.jpg"></div>
-          <div><h3>2</h3></div>
-          <div><h3>3</h3></div>
+    <div class='container'>
+      <div class='fade'>
+        <div class="icon"><img class="slider-image" src="./assets/images/website-1.jpg">
+          <p>London Bridge</p>
         </div>
-          <div class='slider-nav'>
-          <div class="icon"><img class="nav-image" src="./assets/photograph.jpg"></div>
-          <div class="icon"><h3>2</h3></div>
-          <div class="icon"><h3>3</h3></div>
-        
+        <div class="icon"><img class="slider-image" src="./assets/images/website-3.jpg">
+          <p>Pierhead Building in Cardiff Wales</p>
+        </div>
+        <div class="icon"><img class="slider-image" src="./assets/images/website-5.jpg">
+          <p>Somewhere in London</p>
+        </div>
+        <div class="icon"><img class="slider-image" src="./assets/images/website-8.jpg">
+          <p>Somewhere in London</p>
+        </div>
+        <div class="icon"><img class="slider-image" src="./assets/images/website-12.jpg">
+          <p>Porto Venere in Italy</p>
+        </div>
+        <div class="icon"><img class="slider-image" src="./assets/images/website-14.jpg">
+          <p>Sky Garden in London</p>
+        </div>
+        <div class="icon"><img class="slider-image" src="./assets/images/website-15.jpg">
+          <p>Eiffel Tower in Paris</p>
+        </div>
+        <div class="icon"><img class="slider-image" src="./assets/images/website-16.jpg">
+          <p>Arc Du Triomphe in Paris</p>
+        </div>
+        <div class="icon"><img class="slider-image" src="./assets/images/website-17.jpg">
+          <p>Somewhere in Paris</p>
+        </div>
+        <div class="icon"><img class="slider-image" src="./assets/images/website-19.jpg">
+          <p>Bridge of Sighs in Venice</p>
+        </div>
+        <div class="icon"><img class="slider-image" src="./assets/images/website-21.jpg">
+          <p>Corniglia Cinque Terre Italy</p>
+        </div>
+        <div class="icon"><img class="slider-image" src="./assets/images/website-22.jpg">
+          <p>Riomaggiore Cinque Terre Italy</p>
+        </div>
+        <div class="icon"><img class="slider-image" src="./assets/images/website-23.jpg">
+          <p>The Pantheon Rome Italy </p>
+        </div>
+        <div class="icon"><img class="slider-image" src="./assets/images/website-26.jpg">Somewhere in Rome</div>
+        <div class="icon"><img class="slider-image" src="./assets/images/website-27.jpg">
+          <p>somewhere in Nice France</p>
+        </div>
+        <div class="icon"><img class="slider-image" src="./assets/images/website-29.jpg">
+          <p>Trevi Fountain in Italy</p>
         </div>
       </div>
-  <div class="instagram">
-    <iframe src="//lightwidget.com/widgets/74e03d6046ba5b2a99acd75727481f90.html" scrolling="no"
-      allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
-  </div>
 
-  <div class="about">
-    <img class="profile" src="./assets/photograph.jpg">
-    <div class="introduction">
-      <p> Hi! I'm Nikki Sato, a Full-Stack Developer with a passion for Front-End Design. I love to create videos and
-        take photos during my free time! My next Bucketlist to travel are
-      </p>
-      <ol class="align">
-        <li><b>Canada:</b> to visit the Banff Alberta, and travel by train from coast to coast!</li>
-        <li><b>Japan:</b> beautiful sakura flowers blooming in the spring</li>
-        <li><b>Iceland:</b> Amazing northern lights in freezing temperatures</li>
+    </div>
+
+    <div class="about">
+      <img class="profile" src="./assets/photograph.jpg">
+      <div class="introduction">
+        <p> Hi! I'm Nikki Sato, a Full-Stack Developer with a passion for Front-End Design.I created this site to
+          explore Light and Dark toggle in the top of the website, and incorporating instagram and photos from previous
+          trips. I love to create videos and
+          take photos during my free time! My next Bucketlist to travel are
+        </p>
+        <ol class="align">
+          <li><b>Canada:</b> to visit the Banff Alberta, and travel by train from coast to coast!</li>
+          <li><b>Japan:</b> beautiful sakura flowers blooming in the spring</li>
+          <li><b>Iceland:</b> Amazing northern lights in freezing temperatures</li>
+      </div>
+    </div>
+
+    <div class="instagram">
+      <iframe src="//lightwidget.com/widgets/74e03d6046ba5b2a99acd75727481f90.html" scrolling="no"
+        allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+    </div>
+
+    <div class="footer">
+      <p> © Nikki Sato 2020</p>
     </div>
   </div>
-</div>
 
-<script>
+  <script>$(document).ready(function () {
+      $('.your-class').slick({
+        setting- name: setting - value
+  });
+});
+  </script>
 
-$(document).ready(function(){
-    $('.your-class').slick({
-        setting-name: setting - value
+
+  <script>$('.fade').slick({
+      dots: true,
+      infinite: true,
+      fade: true,
+      cssEase: 'linear',
+      autoplay: true,
+      autoplaySpeed: 1000,
     });
-});</script>
+  </script>
 
-<script>
-  $('.slider-for').slick({
-slidesToShow: 1,
-slidesToScroll: 1,
-arrows: false,
-fade: true,
-asNavFor: '.slider-nav'
-});
-$('.slider-nav').slick({
-slidesToShow: 3,
-slidesToScroll: 1,
-asNavFor: '.slider-for',
-dots: true,
-centerMode: true,
-focusOnSelect: true
-});
-</script>
+
 </body>
 
 </html>
